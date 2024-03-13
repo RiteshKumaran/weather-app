@@ -1,4 +1,18 @@
 .container {
   max-width: 1080px;
   margin: 20px auto;
+  color: #fff;
+}
+.city {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1px;
+  margin: 0;
+  letter-spacing: 1px;
+}
+.weather {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1px;
+  margin: 0;
 }
