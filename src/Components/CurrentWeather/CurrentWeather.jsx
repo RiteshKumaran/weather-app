@@ -12,7 +12,7 @@ const CurrentWeather = () => {
         <img src="/icons/01d.png" alt="weather" className="weather-img" />
       </div>
       <div className="bottom">
-        <p>23°C</p>
+        <p className="temperature">23°C</p>
         <div className="details">
           <div className="parameter-row">
             <span className="label">Details</span>
@@ -28,10 +28,10 @@ const CurrentWeather = () => {
           <div className="parameter-row">
             <span className="label">Humidity</span>
             <span className="value">20%</span>
-            <div className="parameter-row">
-              <span className="label">Pressure</span>
-              <span className="value">2 hPa</span>
-            </div>
+          </div>
+          <div className="parameter-row">
+            <span className="label">Pressure</span>
+            <span className="value">2 hPa</span>
           </div>
         </div>
       </div>
