@@ -1,13 +1,13 @@
 import React from "react";
 import "./CurrentWeather.css";
 
-const CurrentWeather = () => {
+const CurrentWeather = ({ data }) => {
   return (
     <div className="weather-container">
       <div className="top">
         <div>
-          <p className="city">Chennai</p>
-          <p className="weather">Sunny</p>
+          <p className="city">{data.city}</p>
+          <p className="weather">{data.weather[0].description}</p>
         </div>
         <img src="/icons/01d.png" alt="weather" className="weather-img" />
       </div>
