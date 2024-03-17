@@ -1,4 +1,5 @@
 import React from "react";
+import "./Forecast.css";
 import {
   Accordion,
   AccordionItem,
@@ -22,14 +23,16 @@ const Forecast = (data) => {
   const forecastDays = WEEK_DAYS.slice(dayInAWeek, WEEK_DAYS.length).concat(
     WEEK_DAYS.slice(0, dayInAWeek)
   );
+
   return (
-    <>
-      <label className="title">Daily</label>
+    <div className="forecast-container">
+      <label className="title">Forecast</label>
       <Accordion allowZeroExpanded>
         {data.data.list.slice(0, 7).map((item, i) => (
           <AccordionItem key={i}>
             <AccordionItemHeading>
               <AccordionItemButton>
+                {console.log(item)}
                 <div className="daily-item">
                   <img
                     src={`/icons/${item.weather[0].icon}.png`}
@@ -47,11 +50,38 @@ const Forecast = (data) => {
                 </div>
               </AccordionItemButton>
             </AccordionItemHeading>
-            <AccordionItemPanel></AccordionItemPanel>
+            <AccordionItemPanel>
+              <div className="forecast-details-grid">
+                <div className="forecast-details-grid-items">
+                  <label>Feels like</label>
+                  <label>{Math.round(item.main.feels_like)}°C</label>
+                </div>
+                <div className="forecast-details-grid-items">
+                  <label>Pressue</label>
+                  <label>{Math.round(item.main.pressure)} hPa</label>
+                </div>
+                <div className="forecast-details-grid-items">
+                  <label>Humidity</label>
+                  <label>{Math.round(item.main.humidity)}%</label>
+                </div>
+                <div className="forecast-details-grid-items">
+                  <label>Wind speed</label>
+                  <label>{Math.round(item.wind.speed)} m/s</label>
+                </div>
+                <div className="forecast-details-grid-items">
+                  <label>Sea level</label>
+                  <label>{Math.round(item.main.feels_like)} m</label>
+                </div>
+                <div className="forecast-details-grid-items">
+                  <label>Clouds</label>
+                  <label>{Math.round(item.clouds.all)}%</label>
+                </div>
+              </div>
+            </AccordionItemPanel>
           </AccordionItem>
         ))}
       </Accordion>
-    </>
+    </div>
   );
 };
 

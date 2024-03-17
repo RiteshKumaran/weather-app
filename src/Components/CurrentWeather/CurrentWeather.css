@@ -19,14 +19,14 @@
   font-family: 600px;
   font-size: 18px;
   line-height: 1;
-  margin: 0;
+  margin-top: 15px;
   letter-spacing: 1px;
 }
 .weather {
   font-weight: 400;
-  font-size: 14px;
+  font-size: 20px;
   line-height: 1;
-  margin: 0;
+  margin-top: 30px;
 }
 .weather-img {
   width: 100px;
@@ -35,7 +35,7 @@
   font-weight: 600;
   font-size: 70px;
   letter-spacing: -5px;
-  margin: 10px 0;
+  margin: 15px 0 0 0;
   width: auto;
 }
 .details {
@@ -55,4 +55,11 @@
   text-align: right;
   font-family: 600;
   font-size: 12px;
+}
+.label-title {
+  text-align: left;
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
