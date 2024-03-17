@@ -26,7 +26,7 @@ const Forecast = (data) => {
 
   return (
     <div className="forecast-container">
-      <label className="title">Forecast</label>
+      <h1 className="title">Forecast</h1>
       <Accordion allowZeroExpanded>
         {data.data.list.slice(0, 7).map((item, i) => (
           <AccordionItem key={i}>

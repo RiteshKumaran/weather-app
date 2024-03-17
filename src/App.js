@@ -1,7 +1,7 @@
 import Search from "./Components/Search/Search";
 import "./App.css";
 import CurrentWeather from "./Components/CurrentWeather/CurrentWeather";
-import { WEATHER_API_KEY, WEATHER_API_URL } from "./Api";
+import { WEATHER_API_KEY, WEATHER_API_URL } from "./api";
 import { useState } from "react";
 import Forecast from "./Components/Forecast/Forecast";
 
